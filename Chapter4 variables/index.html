@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .bag1{
+      background-color: rgb(182, 235, 182);
+      border: none;
+      padding: 5px 10px;
+      border-radius: 10px;
+    }
+    .wishlist{
+      border: 2px solid black;
+      border-radius: 10px;
+      background-color: rgb(231, 229, 229);
+      padding: 5px 35px;
+      text-transform: uppercase;
+    }
+
+  </style>
+  <title>Myntra_Bagbuttons</title>
+</head>
+<body>
+
+  <button class="bag1" onclick="cartquantity ++;
+   document.querySelector('#cart-summary').innerText = `Your Bag has ${cartquantity} items .`;">
+   Add to Bag
+  </button>
+
+  <button class="wishlist"  onclick="cartquantity--;
+   document.querySelector('#cart-summary').innerText = `Your Bag has ${cartquantity} items .`;">Move to Wishlist</button>
+
+
+  <button class="bag1"  onclick="cartquantity += 2;
+   document.querySelector('#cart-summary').innerText = `Your Bag has ${cartquantity} items .`;">Add 1+1 sale item</button>
+  <h3 id="cart-summary"></h3>
+
+
+  <script>
+    let cartquantity = 0;
+    document.querySelector('#cart-summary').innerText = `Your Bag has ${cartquantity} items .`;
+  </script>
+</body>
+</html>
