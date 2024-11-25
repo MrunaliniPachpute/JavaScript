@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cricket-game</title>
+  <style>
+    body{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    Bat Ball Stump Game
+  </h1>
+  <button class="Thing" onclick="
+  //User choice
+  let userChoiceMsg = (' Bat');
+  //Generating computer choice
+  //As Math.random() generates a random no between 0-1, we mul it by 3 to get a rando number between 0 to 3
+
+  let randomNumber = Math.random()*3; 
+  let computerChoice = '';
+  if(randomNumber>=0 && randomNumber<=1){
+     computerChoice = 'Bat';
+  }
+  else if(randomNumber>1 && randomNumber<=2){
+     computerChoice = 'Ball';
+  }
+  else{
+     computerChoice = 'Stump';
+  }
+  //console.log(`Computer's choice is : ${computerChoice} ` );
+  
+  //Display result
+  let result;
+  if(computerChoice === 'Ball'){
+    result = ('You won !');
+    score.win = score.win +1 ;
+  }
+  else if(computerChoice === 'Stump'){
+    result = ('You lose !');
+    score.lose = score.lose + 1;
+  }
+  else{
+    result = (` Tie `);
+    score.tie = score.tie+1;
+  }
+
+  //Printing in alert
+ 
+  localStorage.setItem('score', JSON.stringify(score));
+  alert(`Your choice is : ${userChoiceMsg} \nComputer's choice is : ${computerChoice} \nThe result is : ${result}  
+  \n Won : ${score.win}\n Lose: ${score.lose} \n Tie: ${score.tie}
+  
+  `);
+  // alert(`Computer's choice is : ${computerChoice}`);
+  // alert(`The result is : ${result}`);
+
+  ">Bat</button>
+
+
+  <button class="Thing"  onclick="
+  //User choice
+   userChoiceMsg = (' Ball');
+  //Generating computer choice
+  //As Math.random() generates a random no between 0-1, we mul it by 3 to get a rando number between 0 to 3
+
+   randomNumber = Math.random()*3; 
+   computerChoice = '';
+  if(randomNumber>=0 && randomNumber<=1){
+     computerChoice = 'Bat';
+  }
+  else if(randomNumber>1 && randomNumber<=2){
+     computerChoice = 'Ball';
+  }
+  else{
+     computerChoice = 'Stump';
+  }
+  //console.log(`Computer's choice is : ${computerChoice} ` );
+  
+  //Display result
+  if(computerChoice === 'Ball'){
+    result = (`It's a Tie !`);
+    score.tie = score.tie + 1;
+  }
+  else if(computerChoice === 'Stump'){
+    result = ('You win !');
+    score.win  = score.win + 1;
+  }
+  else{
+    result = (` You lose! `);
+    score.lose = score.lose+1;
+  }
+
+  //Printing in alert
+
+  localStorage.setItem('score',JSON.stringify(score));
+  alert(`Your choice is : ${userChoiceMsg} \nComputer's choice is : ${computerChoice} \nThe result is : ${result} 
+  \n Won : ${score.win}\n Lose: ${score.lose} \n Tie: ${score.tie}
+  `);
+  // alert(`Computer's choice is : ${computerChoice}`);
+  // alert(`The result is : ${result}`);"
+  >Ball</button>
+
+
+  <button class="Thing" onclick="
+  //User choice
+   userChoiceMsg = ('Stump');
+  //Generating computer choice
+  //As Math.random() generates a random no between 0-1, we mul it by 3 to get a rando number between 0 to 3
+
+   randomNumber = Math.random()*3; 
+   computerChoice = '';
+  if(randomNumber>=0 && randomNumber<=1){
+     computerChoice = 'Bat';
+  }
+  else if(randomNumber>1 && randomNumber<=2){
+     computerChoice = 'Ball';
+  }
+  else{
+     computerChoice = 'Stump';
+  }
+  //console.log(`Computer's choice is : ${computerChoice} ` );
+  
+  //Display result
+  if(computerChoice === 'Ball'){
+    result = ('You lose !');
+    score.lose = score.lose+1;
+  }
+  else if(computerChoice === 'Stump'){
+    result = ('Tie !');
+    score.tie = score.tie + 1;
+  }
+  else{
+    result = (` You won! `);
+    score.win = score.win + 1;
+  }
+
+  //Printing in alert
+  
+  localStorage.setItem('score',JSON.stringify(score));
+  alert(`Your choice is : ${userChoiceMsg} \nComputer's choice is : ${computerChoice} \nThe result is : ${result} 
+  \n Won : ${score.win}\n Lose: ${score.lose} \n Tie: ${score.tie}
+  `);
+  // alert(`Computer's choice is : ${computerChoice}`);
+  // alert(`The result is : ${result}`);
+
+  "
+  
+  
+  >Stump</button>
+
+  <button onclick="
+    localStorage.clear()
+    ">RESET</button>
+
+  <script>
+    let score={
+      win : 0,
+      lose : 0,
+      tie : 0,
+    };
+  </script>
+</body>
+</html>
