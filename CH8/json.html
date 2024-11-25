@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JSON</title>
+</head>
+<body>
+  <script>
+
+    // localStorage.setItem("name" , "Mrunalini P");
+    // localStorage.setItem("course" , "JS");
+
+
+    console.log(localStorage.getItem("name"));
+
+    let product = {
+      name : "Tshirt",
+      price : 789,
+      rating : {
+        stars : 4.5,
+        noOfReviews : 69,
+      },
+    };
+
+    // localStorage.setItem("Product", JSON.stringify(product));
+
+    // console.log(localStorage.getItem("Product"));
+
+    // let prod2 = JSON.parse(localStorage.getItem("Product"));
+    // console.log(prod2);
+
+    localStorage.removeItem("course");
+
+    //localStorage.clear();
+
+
+
+
+
+
+
+
+
+
+
+    // let product = {
+    //   name : "Tshirt",
+    //   price : 789,
+    //   rating : {
+    //     stars : 4.5,
+    //     noOfReviews : 69,
+    //   },
+    // };
+
+    // console.log(typeof product);
+    // console.log(product);
+    // let srt = JSON.stringify(product);
+    // console.log(typeof(srt));
+    // console.log(srt);
+
+
+    // let newProd = JSON.parse(srt);
+    // console.log(typeof newProd);
+    // console.log(newProd);
+  </script>
+</body>
+</html>
